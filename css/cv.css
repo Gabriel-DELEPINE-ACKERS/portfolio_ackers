@@ -1,0 +1,164 @@
+/* Correction pour la navbar fixe */
+body {
+    padding-top: 56px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Marges */
+.margin-top-3 {
+    margin-top: 3%;
+}
+
+/* Navbar : changement de couleur au survol */
+.navbar-nav .nav-link:hover {
+    color: white;
+}
+
+/* Indentation de la liste */
+.element-liste {
+    padding-left: 50px;
+}
+
+/* Photo de CV : taille, forme ronde et recadrage */
+.photo-cv {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Sections du CV */
+/* 1. Ajoutez la ligne transition ici */
+section:not(.coord) {
+    padding: 15px;
+    max-width: 500px;
+    border: solid black;
+    margin: 1px;
+    border-radius: 2rem;
+    /* transition fluide pour la couleur de fond, le mouvement, l'ombre et le texte */
+    transition: background-color 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.4s ease;
+}
+
+/* 2. Modifiez le hover pour qu'il soit plus doux */
+section:not(.coord):hover {
+    background-color: rgba(233, 155, 11, 0.8);
+    /* Ajout d'une légère transparence */
+    transform: translateY(-2px);
+    /* Mouvement un peu plus marqué pour le côté premium */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: black;
+    border-color: orange;
+}
+
+/* Icônes dans les titres */
+.largeur {
+    display: flex;
+    width: 100%;
+}
+
+/* Enlève les puces */
+.point {
+    list-style-type: none;
+}
+
+/* Transition pour les boutons */
+.a.btn {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover léger sur les boutons */
+a.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Style pour les titres h3 avec animation au milieu */
+section h3 {
+    position: relative;
+    display: inline-block;
+    /* Pour que le trait fasse la largeur du contenu */
+    padding-bottom: 8px;
+    cursor: pointer;
+    /* On s'assure que le titre reste centré s'il est dans un bloc centré */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section h3::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    /* Épaisseur du trait */
+    bottom: 0;
+    left: 50%;
+    background-color: black;
+    /* Trait visible uniquement au survol */
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+section h3:hover::after {
+    visibility: visible;
+    width: 100%;
+}
+
+#coordonnees {
+    position: relative;
+    display: inline-block;
+    /* Pour que le trait fasse la largeur du contenu */
+    padding-bottom: 8px;
+    cursor: pointer;
+    /* On s'assure que le titre reste centré s'il est dans un bloc centré */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#coordonnees::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    /* Épaisseur du trait */
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    /* Trait visible uniquement au survol */
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+#coordonnees:hover::after {
+    visibility: visible;
+    width: 100%;
+}
+
+/* Effet glow sur l'image du CV */
+.img-cv {
+    transform: translateY(-5px);
+    border-radius: 12px;
+
+    box-shadow:
+        0 0 25px rgba(255, 165, 0, 1),
+        0 0 60px rgba(255, 140, 0, 0.95),
+        0 0 120px rgba(255, 100, 0, 0.85),
+        0 0 220px rgba(255, 60, 0, 0.75);
+    filter: brightness(1.1) contrast(1.1);
+    transition: all 0.3s ease;
+}
+
+/* Hover : zoom + glow plus intense */
+.img-cv:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow:
+        0 0 40px rgba(255, 165, 0, 1),
+        0 0 100px rgba(255, 140, 0, 1),
+        0 0 200px rgba(255, 100, 0, 0.9),
+        0 0 350px rgba(255, 60, 0, 0.8);
+}

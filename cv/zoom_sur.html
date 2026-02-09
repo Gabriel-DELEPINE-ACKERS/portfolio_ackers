@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zoom sur - Gabriel</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="icon" href="../data/img/favicon.ico">
+
+    <link rel="stylesheet" href="../css/zoom_sur.css">
+    <link rel="stylesheet" href="../css/js.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/general.css">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            user-select: none
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem
+            }
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor
+        }
+
+        /* TES STYLES ORIGINAUX POUR LE BOUTON DE THÈME */
+        .btn-bd-primary {
+            --bd-violet-bg: #712cf9;
+            --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+            --bs-btn-font-weight: 600;
+            --bs-btn-color: var(--bs-white);
+            --bs-btn-bg: var(--bd-violet-bg);
+            --bs-btn-border-color: var(--bd-violet-bg);
+            --bs-btn-hover-color: var(--bs-white);
+            --bs-btn-hover-bg: #6528e0;
+            --bs-btn-hover-border-color: #6528e0;
+            --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+            --bs-btn-active-color: var(--bs-btn-hover-color);
+            --bs-btn-active-bg: #5a23c8;
+            --bs-btn-active-border-color: #5a23c8
+        }
+
+        .bd-mode-toggle {
+            z-index: 1500
+        }
+
+        .bd-mode-toggle .bi {
+            width: 1em;
+            height: 1em
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important
+        }
+
+        /* TON BOUTON VERT ARRONDI */
+        .btn-vert-site {
+            background-color: #198754 !important;
+            border-color: #198754 !important;
+            color: white !important;
+            border-radius: 50px !important;
+            padding: 12px 30px !important;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn-vert-site:hover {
+            background-color: #157347 !important;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z">
+            </path>
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z">
+            </path>
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z">
+            </path>
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z">
+            </path>
+        </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            data-bs-toggle="dropdown">
+            <svg class="bi my-1 theme-icon-active">
+                <use href="#circle-half"></use>
+            </svg>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow">
+            <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"><svg
+                        class="bi me-2 opacity-50">
+                        <use href="#sun-fill"></use>
+                    </svg> Light</button></li>
+            <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"><svg
+                        class="bi me-2 opacity-50">
+                        <use href="#moon-stars-fill"></use>
+                    </svg> Dark</button></li>
+            <li><button type="button" class="dropdown-item d-flex align-items-center active"
+                    data-bs-theme-value="auto"><svg class="bi me-2 opacity-50">
+                        <use href="#circle-half"></use>
+                    </svg> Auto</button></li>
+        </ul>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top border-noir">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Mon Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0 text-center text-md-start">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../cv/cv.html">CV</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="./zoom_sur.html">Zoom sur</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../saes/sae102/sae102.html">Projets</a></li>
+                    </ul>
+                    <div class="d-flex justify-content-center justify-content-md-end align-items-center mt-3 mt-md-0">
+                        <form class="d-flex align-items-center" role="search">
+                        <a title="Voir mon profil Github"
+                            href="https://github.com/Gabriel-DELEPINE-ACKERS" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-sm btn-violet-custom" role="button">
+                            <i class="bi bi-github" style="font-size: 1.2rem;"></i>
+                        </a>
+                        <a title="Voir mon profil Gricad"
+                            href="https://gricad-gitlab.univ-grenoble-alpes.fr/deleping" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-sm btn-violet-custom" role="button">
+                            <i class="bi bi-gitlab" style="font-size: 1.2rem;"></i>
+                        </a>
+                        <a title="Voir mon profil Linkedin"
+                            href="https://fr.linkedin.com/in/gabriel-de-l%C3%A9pine-ackers-357b35398" target="_blank"
+                            rel="noopener noreferrer" class="btn btn-sm btn-violet-custom" role="button">
+                            <i class="bi bi-linkedin" style="font-size: 1.2rem;"></i>
+                        </a>
+                        <a title="Me contacter par mail"
+                            href="mailto:gabriel.de-lepine--ackers@etu.univ-grenoble-alpes.fr?"
+                            class="btn btn-sm btn-violet-custom" role="button">
+                            <i class="bi bi-envelope-at" style="font-size: 1.2rem;"></i>
+                        </a>
+                        
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container my-5">
+            <div class="text-center mb-5">
+                <div class="titre center-div">
+                    <h1 class="maj">Zoom sur mon projet personnel</h1>
+                </div>
+            </div>
+
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col-12 col-md-7 order-1 order-md-2 top">
+                    <h1 class="fw-normal lh-1 titre">
+                        Du Code au Jeu <span class="text-body-secondary">en 2024 !</span>
+                    </h1>
+                    <p class="lead">En 2024, en parallèle de mon année de terminale, j’ai décidé de me lancer dans
+                        l’apprentissage du développement web en autonomie depuis chez moi.</p>
+                    <p class="lead">Pour progresser, j’ai créé mon propre site sur lequel je rassemble tout ce que
+                        j’apprends sur le développement web au fil du temps. J’ai travaillé et appris seul pendant 3
+                        mois pour que ce projet m’en apprenne le plus possible. Pour pratiquer et mieux comprendre son
+                        fonctionnement, j’y ai travaillé durant mon temps libre en me formant seul et j’y ai développé
+                        deux jeux interactifs : Puissance 4 et Morpion.</p>
+                    <p class="lead">Mon objectif était de comprendre les bases du développement web, d’organiser mon
+                        apprentissage à l’aide de ressources et d’expériences. J’ai beaucoup aimé créer quelque chose
+                        qui pourra me servir même dans le futur car ce site répertorie certains points du développement
+                        web ce qui pourra être utile si je souhaite continuer à en créer. J’ai l’impression d’avoir
+                        réellement appris de ce projet personnel et d’avoir progressé dans mon organisation. Le lien du
+                        site est : <strong class="text-decoration-underline"
+                            title="Premier site de Gabriel">http://ackers.didelo.fr</strong></p>
+                </div>
+
+                <div class="col-12 col-md-5 order-2 order-md-1 mb-4 mb-md-0 top">
+                    <img src="../data/img/extraits_site.png" class="img-fluid rounded-4 mx-auto d-block img-general-bleu"
+                        alt="Extrait du site">
+                </div>
+            </div>
+
+            <div title="Liens vers mon site externe à ce Portfolio" class="text-center mt-5">
+                <a href="http://ackers.didelo.fr" target="_blank"
+                    class="btn btn-vert-site btn-lg d-inline-flex align-items-center">
+                    Lien vers mon site
+                    <i class="bi bi-box-arrow-up-right ms-2" style="font-size: 0.9rem;"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+    <div class="container text-center my-5 py-5 border-top">
+        <h2 class="mb-4 fw-bold">Continuer la visite</h2>
+        <div class="d-flex flex-wrap justify-content-center">
+            <a href="./cv.html" class="btn btn-primary nav-footer-btn">
+                <i class="bi bi-file-earmark-person"></i> Mon CV Complet
+            </a>
+            <a href="../saes/sae102/sae102.html" class="btn btn-primary nav-footer-btn">
+                <i class="bi bi-folder2-open"></i> Mes Projets
+            </a>
+            <a href="../index.html" class="btn btn-primary nav-footer-btn">
+                <i class="bi bi-search"></i> Retour à l'accueil
+            </a>
+        </div>
+    </div>
+
+    <footer class="container mt-5 py-4 border-top">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="mb-0 text-body-secondary">&copy; <span id="current-year"></span> – Gabriel de
+                    Lépine--Ackers</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <ul class="nav justify-content-center justify-content-md-end">
+                    <li class="nav-item"><a href="./legal.html#mentions"
+                            class="nav-link px-2 text-body-secondary small">Mentions Légales</a></li>
+                    <li class="nav-item"><a href="./legal.html#confidentialite"
+                            class="nav-link px-2 text-body-secondary small">Confidentialité</a></li>
+                    <li class="nav-item"><a href="./legal.html#contact"
+                            class="nav-link px-2 text-body-secondary small">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

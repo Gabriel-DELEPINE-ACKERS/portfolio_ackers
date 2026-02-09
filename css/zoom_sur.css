@@ -1,0 +1,121 @@
+.bottom {
+    margin-bottom: 20px;
+}
+
+.top {
+    margin-top: 2rem;
+}
+
+/* Navbar fixe */
+body {
+    padding-top: 56px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Navbar : couleur des liens + transition */
+.navbar-nav .nav-link {
+    color: lightgray;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white;
+}
+
+.center-div {
+    padding: 1rem;
+    text-align: center;
+}
+
+.text-decoration-underline {
+    text-decoration: underline;
+}
+
+/* Image : marge en bas */
+.img-up {
+    margin-bottom: 7rem;
+}
+
+/* Featurette divider (présent dans le HTML) */
+.featurette-divider {
+    margin: 5rem 0;
+}
+
+/* --- Centrage et Animation du Titre H1 --- */
+
+/* On force le parent à centrer le contenu (le titre inline-block) */
+.col-md-7.order-md-2 {
+    text-align: center !important;
+}
+
+.titre {
+    position: relative;
+    display: inline-block;
+    /* Permet au trait de ne pas dépasser la largeur du texte */
+    padding-bottom: 10px;
+    margin-bottom: 2rem;
+    /* On ne met pas de margin: auto ici, ça ne marche pas sur l'inline-block */
+}
+
+.titre::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-50%);
+    /* Pour que l'animation s'ouvre depuis le centre */
+}
+
+.titre:hover::after {
+    visibility: visible;
+    width: 100%;
+}
+
+.maj {
+    font-size: 50px;
+}
+
+/* Effet sur l'icône dans le bouton au survol */
+.btn:hover .bi-box-arrow-up-right {
+    transform: translate(2px, -2px);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Style du bouton personnalisé */
+.btn-custom-site {
+    background-color: #198754;
+    /* Un beau vert succès */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    /* Forme pilule (très arrondi) */
+    padding: 12px 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(25, 135, 84, 0.2);
+}
+
+/* Hover du bouton : plus foncé + léger saut + ombre */
+.btn-custom-site:hover {
+    background-color: #157347;
+    /* Vert plus foncé au survol */
+    color: white;
+    transform: translateY(-3px);
+    /* Petit saut vers le haut */
+    box-shadow: 0 6px 20px rgba(25, 135, 84, 0.4);
+}
+
+/* L'icône tourne légèrement pour montrer le côté "externe" */
+.btn-custom-site:hover .bi-box-arrow-up-right {
+    transform: translate(3px, -3px);
+    transition: transform 0.3s ease;
+}

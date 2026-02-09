@@ -1,0 +1,321 @@
+/* Bordure noire en bas + fond gris foncé */
+.border-noir {
+    border-bottom: solid 1px black;
+    background-color: rgb(41, 40, 40)
+}
+
+/* Changement de couleur au survol */
+.border-noir:hover {
+    background-color: rgb(41, 35, 35);
+}
+
+/* Cible les liens de la navbar */
+.navbar-nav .nav-link {
+    position: relative;
+    padding-bottom: 5px; /* espace pour la ligne du bas */
+    transition: color 0.3s ease;
+}
+
+/* Crée la ligne blanche sous le lien */
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 100%; /* ligne de la largeur du texte */
+    left: 0;
+    bottom: 0;
+    transition: transform 0.3s ease;
+}
+
+/* Ligne cachée au départ */
+.navbar-nav .nav-link::after {
+    transform: scaleX(0);
+}
+
+/* Ligne qui apparaît au survol */
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Animation du reflet (shine) */
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    20% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* ===== STYLE DES BOUTONS (NAV FOOTER) ===== */
+
+/* Animation du reflet (répétée mais identique) */
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    20% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Style de base des boutons du footer */
+.nav-footer-btn {
+    display: inline-block;
+    margin: 15px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border: none !important;
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+
+    /* Couleur de base orange */
+    background: linear-gradient(45deg, #d1921d, #ffae00) !important;
+    color: white !important;
+}
+
+/* Effet hover : grossissement + violet + ombre violette */
+.nav-footer-btn:hover {
+    transform: scale(1.15);
+    background: linear-gradient(45deg, #712cf9, #4a00e0) !important;
+    box-shadow: 0 8px 25px rgba(113, 44, 249, 0.5) !important;
+    color: white !important;
+}
+
+/* Forcer le style hover sur les liens/boutons bootstrap */
+a.nav-footer-btn:hover,
+.btn.nav-footer-btn:hover {
+    transform: scale(1.15) !important;
+    background: linear-gradient(45deg, #712cf9, #4a00e0) !important;
+    box-shadow: 0 8px 25px rgba(113, 44, 249, 0.5) !important;
+    display: inline-block !important;
+    z-index: 10;
+}
+
+/* ===== REFLET (shine) ===== */
+
+/* Définition de l'animation (encore répétée) */
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    20% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Style de base des boutons (orange) - répété */
+.nav-footer-btn {
+    display: inline-block !important;
+    margin: 15px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* couleur orange par défaut */
+    background: linear-gradient(45deg, #d1921d, #ffae00) !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+    /* Préparation pour effet brillant */
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Calque blanc qui crée l'effet brillant */
+.nav-footer-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.5) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+}
+
+/* Hover : violet + grossissement */
+.nav-footer-btn:hover {
+    transform: scale(1.15) !important;
+    background: linear-gradient(45deg, #712cf9, #4a00e0) !important;
+    box-shadow: 0 8px 25px rgba(113, 44, 249, 0.5) !important;
+    color: white !important;
+}
+
+/* Accélère le reflet au survol */
+.nav-footer-btn:hover::after {
+    animation: shine 1.5s infinite;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 767px) {
+    .navbar .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        margin-top: 20px;
+    }
+
+    .navbar-collapse form {
+        justify-content: center !important;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+/* ===== REFLET (encore une fois) ===== */
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    20% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* ===== BOUTONS VIOLETS ===== */
+.btn-violet-custom {
+    display: inline-block !important;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* couleur violette */
+    background: linear-gradient(45deg, #712cf9, #4a00e0) !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(113, 44, 249, 0.3);
+
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Calque blanc pour reflet */
+.btn-violet-custom::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.5) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+}
+
+/* Hover violet + ombre plus forte */
+.btn-violet-custom:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 15px 40px rgba(113, 44, 249, 0.8) !important;
+    color: white !important;
+}
+
+/* ===== EFFETS HALO SUR LES IMAGES ===== */
+.cards-project {
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-general {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.img-general:hover {
+    transform: scale(1.02) translateY(-5px);
+    border-color: orange;
+    box-shadow: 0 0 40px 12px rgba(255, 165, 0, 0.9) !important;
+}
+
+.cards-project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px 12px rgba(255, 165, 0, 0.9) !important;
+    border-color: orange;
+}
+
+.cards-project:hover img {
+    transform: scale(1.02);
+    box-shadow: none !important;
+}
+
+.img-general-rose {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.img-general-rose:hover {
+    transform: scale(1.02) translateY(-5px);
+    border-color: orange;
+    box-shadow: 0 0 40px 20px rgba(134, 78, 132, 0.9) !important;
+}
+
+.img-general-bleu {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.img-general-bleu:hover {
+    transform: scale(1.02) translateY(-5px);
+    border-color: orange;
+    box-shadow: 0 0 40px 20px rgba(106, 169, 228, 0.9) !important;
+}
+
+.img-general-blanc {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.img-general-blanc:hover {
+    transform: scale(1.02) translateY(-5px);
+    border-color: rgb(206, 201, 192);
+    box-shadow: 0 0 40px 10px rgba(215, 216, 219, 0.9) !important;
+}

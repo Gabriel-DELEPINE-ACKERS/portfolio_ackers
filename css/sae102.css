@@ -1,0 +1,240 @@
+/* Correction pour la navbar fixe */
+body {
+    padding-top: 56px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Marges */
+.margin-top-3 {
+    margin-top: 3%;
+}
+
+/* Navbar : couleur blanche au survol */
+.navbar-nav .nav-link:hover {
+    color: white;
+}
+
+/* Layout photo + coordonnées : centrage et espacement */
+.parent {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.element-liste {
+    padding-left: 50px;
+}
+
+/* Photo de CV : taille fixe, ronde et recadrée */
+.photo-cv {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Sections du CV : style des blocs */
+section:not(.coord) {
+    padding: 15px;
+    max-width: 500px;
+    border: solid black;
+    margin: 10px;
+    border-radius: 2rem;
+}
+
+/* Hover des sections : changement de couleur + effet levé */
+section:not(.coord):hover {
+    background-color: rgb(209, 146, 29);
+    /* léger changement */
+    transform: translateY(-5px);
+    /* micro mouvement */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    color: black;
+}
+
+/* Icônes dans les titres : taille */
+.litte-icon {
+    width: 40px;
+    height: auto;
+}
+
+.largeur {
+    display: flex;
+    width: 100%;
+}
+
+/* Enlève les puces */
+.point {
+    list-style-type: none;
+}
+
+/* Transition sur les boutons */
+.a.btn {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover boutons : léger levé */
+a.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Image de présentation : bord arrondi + bord noir */
+.image_presentation {
+    border-radius: 2rem;
+    border: solid black;
+    object-fit: cover;
+}
+
+/* Image redimensionnée : taille fixe + couverture */
+.img-resize {
+    height: 300px;
+    /* hauteur identique pour toutes les images */
+    object-fit: cover;
+    /* remplit sans déformer */
+    width: 100%;
+}
+
+/* Centrage texte */
+.text-align-center {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Police : taille du texte */
+.police {
+    font-size: 20px;
+}
+
+/* Style du titre objectif : fond orange et bord arrondi */
+.objectif-titre {
+    border-radius: 3rem;
+    background-color: orange;
+    color: black;
+    align-self: flex-start;
+}
+
+/* Margin-top avec bord arrondi */
+.margin-top {
+    border-radius: 3rem;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+}
+
+/* Positionnement à droite (50% de marge droite) */
+.partie-droite {
+    margin-right: 50%;
+}
+
+/* Hauteur de carte full */
+.card {
+    height: 100%;
+}
+
+/* Hover sur les cartes projet */
+.cards-project:hover {
+    background-color: rgb(218, 145, 10);
+    /* léger changement */
+    transform: translateY(-5px);
+    /* micro mouvement */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    color: black;
+}
+
+/* Marges (attention : unités 'lh' peuvent être erronées) */
+.margin-bottom-soutitre {
+    margin-bottom: 3lh;
+}
+
+.margin-bottom {
+    margin-bottom: -3lh;
+}
+
+.margin-top-titre {
+    margin-top: 3lh;
+}
+
+/* Image arrondie */
+.img_rounded {
+    border-radius: 3rem;
+}
+
+/* Marge haut */
+.margin-top-comp {
+    margin-top: 3rem;
+}
+
+/* Titre animé : centrage + trait */
+.titre-anime {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 8px;
+    /* Espace entre le texte et le trait */
+}
+
+.titre-anime::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    /* Épaisseur du trait blanc */
+    bottom: 0;
+    left: 50%;
+    /* On place le départ au milieu */
+    background-color: white;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+    /* On s'assure que l'expansion reste centrée */
+}
+
+.titre-anime:hover::after {
+    visibility: visible;
+    width: 100%;
+    /* S'étend sur toute la largeur au survol */
+}
+
+/* Centre la navbar */
+.nav-center {
+    justify-content: center;
+}
+
+/* Titre animé (autre style) : centrage + trait */
+.anime {
+    position: relative;
+    display: inline-block;
+    /* Pour que le trait fasse la largeur du contenu */
+    padding-bottom: 8px;
+    cursor: pointer;
+    /* On s'assure que le titre reste centré s'il est dans un bloc centré */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.anime::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    /* Épaisseur du trait */
+    bottom: 0;
+    left: 50%;
+    background-color: black;
+    /* Trait caché au départ */
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.anime:hover::after {
+    visibility: visible;
+    width: 100%;
+}

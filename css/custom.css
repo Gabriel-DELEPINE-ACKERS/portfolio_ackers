@@ -1,0 +1,34 @@
+/* Taille de la carousel (94% de la hauteur de la fenêtre) */
+.carousel {
+    height: 94vh;
+    margin-bottom: 4rem;
+}
+
+/* Photo CV : taille fixe et centrée */
+.photo-cv {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+/* Positionnement des coordonnées sous la photo */
+.photo-cv-coordonnees {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Petite icône : taille définie */
+.little-icon {
+    width: 40px;
+    height: auto;
+}
+
+/* Bloc d'auto-réflexion : padding, marge et fond rose */
+.auto-reflexion {
+    padding: 10px;
+    margin-top: 100px;
+    background-color: lightpink
+}
