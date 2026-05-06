@@ -319,3 +319,58 @@ a.nav-footer-btn:hover,
     border-color: rgb(206, 201, 192);
     box-shadow: 0 0 40px 10px rgba(215, 216, 219, 0.9) !important;
 }
+
+
+.dropdown {
+    position: relative;
+}
+
+/* état caché */
+.dropdown-menu {
+    /* AJOUT : Pour permettre l'animation malgré Bootstrap */
+    display: block !important;
+    visibility: hidden;
+
+    position: absolute;
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+    pointer-events: none;
+
+    /* AJOUT : visibility dans la transition */
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+
+    text-align: center;
+}
+
+/* état ouvert (Bootstrap + hover PC) */
+.dropdown-menu.show,
+.dropdown:hover .dropdown-menu {
+    /* AJOUT : Rend le menu visible */
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-26%) translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        /* On garde ton code tel quel */
+        width: 200px;
+        min-width: unset;
+        margin: 0 auto;
+        text-align: center;
+
+        /* AJOUT : On assure que l'absolute reste pour garder le style de "boite" */
+        position: absolute !important;
+        left: 50%;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    /* AJOUT : L'état ouvert sur mobile pour l'animation au clic */
+    .dropdown-menu.show {
+        transform: translateX(40%) translateY(0) scale(1) !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
