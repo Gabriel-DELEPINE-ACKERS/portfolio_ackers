@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projets - Gabriel</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="icon" href="../../data/img/favicon.ico">
+
+    <link rel="stylesheet" href="../../css/sae104.css">
+    <link rel="stylesheet" href="../../css/js.css">
+    <link rel="stylesheet" href="../../css/custom.css">
+    <link rel="stylesheet" href="../../css/general.css">
+    <style>
+        /* Espace entre les titres et les images sur SAE 1.04 */
+        h2 + figure,
+        h3 + figure,
+        p + figure {
+            margin-top: 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top border-noir">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html">Mon Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../cv/cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../../cv/zoom_sur.html">Zoom sur</a></li>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarProjets" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Projets
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarProjets">
+                                <li><a class="dropdown-item" href="../sae102/sae102.html">SAE 1.02</a></li>
+                                <li><a class="dropdown-item" href="../sae203/sae203.html">SAE 2.03</a></li>
+                                <li><a class="dropdown-item" href="../sae204/sae204.html">SAE 2.04</a></li>
+                                <li><a class="dropdown-item" href="./sae104.html">SAE 1.04</a></li>
+                            </ul>
+                    </li>
+                </ul>
+                <form class="d-flex align-items-center" role="search">
+                    <a title="Voir mon profil Github" href="https://github.com/Gabriel-DELEPINE-ACKERS" target="_blank"
+                        rel="noopener noreferrer" class="btn btn-sm btn-violet-custom" role="button">
+                        <i class="bi bi-github" style="font-size: 1.2rem;"></i>
+                    </a>
+                    <a title="Voir mon profil Gricad" href="https://gricad-gitlab.univ-grenoble-alpes.fr/deleping"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-violet-custom" role="button">
+                        <i class="bi bi-gitlab" style="font-size: 1.2rem;"></i>
+                    </a>
+                    <a title="Voir mon profil Linkedin"
+                        href="https://fr.linkedin.com/in/gabriel-de-l%C3%A9pine-ackers-357b35398" target="_blank"
+                        rel="noopener noreferrer" class="btn btn-sm btn-violet-custom" role="button">
+                        <i class="bi bi-linkedin" style="font-size: 1.2rem;"></i>
+                    </a>
+                    <a title="Me contacter par mail" href="mailto:gabriel.de-lepine--ackers@etu.univ-grenoble-alpes.fr?"
+                        class="btn btn-sm btn-violet-custom" role="button">
+                        <i class="bi bi-envelope-at" style="font-size: 1.2rem;"></i>
+                    </a>
+
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="text-align-center margin-top-titre titre-anime">
+        SAE 1.04 - CVWeb- Travaux pratiques
+    </h1>
+
+    <p class="text-align-center margin-bottom-soutitre">
+         Dans le cadre de la SAE 1.04 - Développement - CVWeb, j’ai développé un portfolio Web personnel permettant de présenter mon parcours,<br> mes compétences et les différents projets réalisés durant ma formation en Réseaux et Télécommunications.
+    </p>
+
+    <main class="container-fluid mt-5 pt-5">
+        <div class="row gx-md-5 gy-4 justify-content-center">
+
+            <div class="col-sm-6 col-md-4 order-2 order-md-1 margin-top">
+                <div class="p-3 border-light shadow-sm h-100 margin-bottom">
+                    <h3 class="text-center">Arborescence du site web réel</h3>
+
+                    <figure class="mb-3 text-center">
+                        <img src="./data/img/arborescence_code_grand.png" class="img-fluid img-general-blanc img_rounded mx-auto d-block"
+                            alt="Arborescence du site web réel">
+                        <figcaption class="text-center caption-text mt-2">Image de l'arborescence du site web réel.</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4 order-1 order-md-2">
+                <div class="p-3 shadow-sm objectif-titre img-general">
+                    <h2 class="text-center anime">Objectifs</h2>
+                    <ul>
+                        <li>Créer un site Web responsive et moderne</li>
+
+                        <li>Présenter un CV et des projets techniques en ligne</li>
+
+                        <li>Utiliser Bootstrap pour la mise en page</li>
+
+                        <li>Respecter les normes Web et une structure de projet organisée</li>
+
+                        <li>Déployer un site Internet sur un serveur distant</li>
+
+                        <li>Utiliser GitLab pour le suivi et le versionnement du projet</li>
+                    </ul>
+
+                </div>
+
+                <div class="objectif-titre auto-reflexion-nuit img-general-nuit">
+                    <h2 class="text-align-center p-3 anime"><strong>Auto-réflexion</strong></h2>
+                    <p>Durant cette SAE, j’ai conçu et développé les différentes pages principales de mon portfolio Web en mettant en place une navigation responsive adaptée aux ordinateurs comme aux téléphones. J’ai également intégré plusieurs illustrations, pictogrammes et animations afin de rendre l’interface plus moderne et agréable à utiliser.
+                    </p>
+                    <p>
+                        Ce projet m’a permis de mieux comprendre l’organisation d’un site Web professionnel grâce à une arborescence claire et structurée, ainsi qu’à la personnalisation du design avec mon propre fichier CSS. J’ai aussi appris à déployer un site Internet sur AlwaysData et à utiliser GitLab pour gérer les différentes versions du projet.
+                    </p>
+                    <p>Cette SAE m’a beaucoup aidé à progresser en développement Web et à améliorer ma manière de présenter mes réalisations techniques de façon plus professionnelle.</p>
+                </div>
+                <div class="p-3 shadow-sm">
+                    <h3 class="text-center margin-top-comp titre-anime">Compétences acquises</h3>
+                    <ul>
+                        <li>Développement front-end avec HTML, CSS et Bootstrap
+                            <hr>
+                        </li>
+                        <li>Responsive design sur tous types d’appareils
+                            <hr>
+                        </li>
+                        <li>Organisation d’un projet Web avec une arborescence claire
+                            <hr>
+                        </li>
+                        <li>Déploiement d’un site Internet sur un serveur distant avec AlwaysData
+                            <hr>
+                        </li>
+                        <li>Respect des normes Web (W3C) et bonnes pratiques de développement
+                            <hr>
+                        </li>
+                        <li>Gestion de versions avec Git
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 order-3 margin-top">
+                <div class="p-3 shadow-sm">
+                    <h3 class="text-center">Arborescence du portfolio idéal</h3>
+                    <figure class="mb-3 text-center">
+                        <img src="./data/img/arborescence.png"
+                            class="img-fluid img-rounded img-general-blanc mx-auto d-block"
+                            alt="Image à ajouter">
+                        <figcaption class="text-center caption-text mt-2">Image de l'arborescence du portfolio idéal</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            
+
+        </div>
+        <div class="container text-center my-5 py-5 border-top">
+            <h2 class="mb-4 fw-bold">Continuer la visite</h2>
+            <div class="d-flex flex-wrap justify-content-center">
+                <a href="/cv/cv.html" class="btn btn-primary nav-footer-btn">
+                    <i class="bi bi-file-earmark-person"></i> Mon CV Complet
+                </a>
+                <a href="/index.html" class="btn btn-primary nav-footer-btn">
+                    <i class="bi bi-folder2-open"></i> Retour à l'accueil
+                </a>
+                <a href="/cv/zoom_sur.html" class="btn btn-primary nav-footer-btn">
+                    <i class="bi bi-search"></i> Zoom sur mes créations
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="container mt-5 py-4 border-top">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="mb-0 text-body-secondary">
+                    &copy; <span id="current-year"></span> – Gabriel de Lépine--Ackers
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <ul class="nav justify-content-center justify-content-md-end">
+                    <li class="nav-item">
+                        <a href="/cv/legal.html#mentions" class="nav-link px-2 text-body-secondary small">
+                            Mentions Légales
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/cv/legal.html#confidentialite" class="nav-link px-2 text-body-secondary small">
+                            Confidentialité
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/cv/legal.html#contact" class="nav-link px-2 text-body-secondary small">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/script.js"></script>
+
+</body>
+
+</html>

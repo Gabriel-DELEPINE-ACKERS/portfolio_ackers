@@ -1,7 +1,7 @@
 // easter-egg.js
 
 let clickCounter = 0;
-const maxClicks = 1;
+const maxClicks = 5;
 const DURATION = 5000; // durée de la pluie de confettis (ms)
 const MESSAGE_DURATION = 2500; // durée du message (ms)
 
@@ -58,10 +58,16 @@ function launchConfettiRain() {
 
 // Écoute des clics
 if (trigger) {
-    trigger.addEventListener("click", () => {
+    trigger.addEventListener("click", (event) => {
+        const isHomePage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/" || window.location.pathname === "";
+
         clickCounter++;
+
         if (clickCounter === maxClicks) {
+            event.preventDefault();
             launchConfettiRain();
+        } else if (isHomePage) {
+            event.preventDefault();
         }
     });
 }

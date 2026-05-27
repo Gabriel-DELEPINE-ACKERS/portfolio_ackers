@@ -344,6 +344,23 @@ a.nav-footer-btn:hover,
     box-shadow: 0 0 40px 10px rgba(62, 142, 145) !important;
 }
 
+.img-general-nuit {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.img-general-nuit:hover {
+    transform: scale(1.02) translateY(-5px);
+    border-color: #0F172A;
+    box-shadow: 0 0 40px 10px rgba(15, 23, 42, 0.9) !important;
+}
+
+.img-general-bleu:hover {
+    transform: scale(1.02) translateY(-5px);
+    border-color: rgb(62, 142, 145);
+    box-shadow: 0 0 40px 10px rgba(62, 142, 145) !important;
+}
+
 .dropdown {
     position: relative;
 }
