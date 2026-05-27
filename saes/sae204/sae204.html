@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="icon" href="../../data/img/favicon.ico">
 
-    <link rel="stylesheet" href="../../css/sae203.css">
+    <link rel="stylesheet" href="../../css/sae204.css">
     <link rel="stylesheet" href="../../css/js.css">
     <link rel="stylesheet" href="../../css/custom.css">
     <link rel="stylesheet" href="../../css/general.css">
@@ -40,8 +40,8 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarProjets">
                                 <li><a class="dropdown-item" href="../sae102/sae102.html">SAE 1.02</a></li>
-                                <li><a class="dropdown-item" href="./sae203.html">SAE 2.03</a></li>
-                                <li><a class="dropdown-item" href="../sae204/sae204.html">SAE 2.04</a></li>
+                                <li><a class="dropdown-item" href="../sae203/sae203.html">SAE 2.03</a></li>
+                                <li><a class="dropdown-item" href="sae204.html">SAE 2.04</a></li>
                                 <li><a class="dropdown-item" href="../sae104/sae104.html">SAE 1.04</a></li>
                             </ul>
                     </li>
@@ -72,12 +72,13 @@
     </nav>
 
     <h1 class="text-align-center margin-top-titre titre-anime">
-        SAE2.03 - WebEntreprise - Travaux pratiques
+        SAE2.04 - Projet Intégratif - Travaux pratiques
     </h1>
 
     <p class="text-align-center margin-bottom-soutitre">
-        Dans le cadre d'un projet, la SAE2.03 - WebEntreprise, j’ai réalisé une série de travaux pratiques<br>
-        dans le but de développer une application Web (Python/Flask/BDD) permettant la gestion des plateformes techniques.
+        Dans le cadre de la SAE 2.04 - Projet Intégratif, j’ai participé au développement d’une chaîne complète de collecte et de visualisation de données de température.
+
+Le projet consistait à concevoir un capteur électronique, récupérer les données avec Python, les stocker dans une base PostgreSQL puis les afficher en temps réel avec Grafana sur un serveur OpenStack.
     </p>
 
     <main class="container-fluid mt-5 pt-5">
@@ -87,14 +88,14 @@
                 <div class="p-3 border-light shadow-sm h-100 margin-bottom">
                     <h3 class="text-center">Formulaire d'ajout d'un ordinateur</h3>
 
-                    <figure class="mb-3">
-                        <img src="./data/img/sae203_ajout_ordi.png" class="img-fluid img-general-blanc img_rounded"
+                    <figure class="mb-3 text-center">
+                        <img src="./data/img/Capture d’écran 2026-05-27 195043.png" class="img-fluid img-general-blanc img_rounded mx-auto d-block"
                             alt="Formulaire d'ajout d'ordinateur dans l'application">
                         <figcaption class="text-center caption-text mt-2">Formulaire pour ajouter un ordinateur.</figcaption>
                     </figure>
                     <h3 class="text-center">Gestion des ordinateurs</h3>
                     <figure class="mb-3">
-                        <img src="./data/img/sae203_gestion_ordi.png" class="img-fluid img-general-blanc img_rounded"
+                        <img src="./data/img/create_table.png" class="img-fluid img-general-blanc img_rounded"
                             alt="Tableau de gestion des ordinateurs dans l'application">
                         <figcaption class="text-center caption-text mt-2">Écran de gestion des ordinateurs.</figcaption>
                     </figure>
@@ -104,54 +105,49 @@
             <div class="col-sm-12 col-md-4 order-1 order-md-2">
                 <div class="p-3 shadow-sm objectif-titre img-general">
                     <h2 class="text-center anime">Objectifs</h2>
-                    <p>
-
-                        Développer un système, proche de GLPI, collecte/stocke :</p>
                     <ul>
-                        <li>L'inventaire des équipements</li>
+                        <li>Concevoir une chaîne de mesure de température</li>
 
-                        <li>Leurs caractéristiques techniques (par ex: capacité de stockage du disque)</li>
+                        <li>Développer un programme Python de récupération et traitement des données</li>
 
-                        <li>Leurs configurations (par ex: système d’exploitation d’un ordinateur, IP fixe attribuée sur
-                            le
-                            réseau)</li>
+                        <li>Configurer un serveur Linux sous OpenStack</li>
 
-                        <li>Leurs caractéristiques d’usage (par ex: nom du technicien chargé de la maintenance)</li>
+                        <li>Installer PostgreSQL et Grafana</li>
 
-                        <li>Il analyse également l'état des équipements au travers de différentes métriques (par ex:
-                            faut-il
-                            envisager de mettre à jour le système d’exploitation ?).</li>
+                        <li>Visualiser les données en temps réel</li>
+
+                        <li>Travailler en autonomie avec GitLab et gestion de projet</li>
                     </ul>
 
                 </div>
 
-                <div class="objectif-titre auto-reflexion-vert img-general-vert">
+                <div class="objectif-titre auto-reflexion-bleu img-general-bleu">
                     <h2 class="text-align-center p-3 anime"><strong>Auto-réflexion</strong></h2>
-                    <p>J'ai énormément appris grâce à cette SAE parce que j'ai pu travailler sur un long projet proche du travail demandé en entreprise.
+                    <p>Cette SAE m’a permis de travailler sur un projet complet combinant électronique, développement Python, administration système et visualisation de données.
                     </p>
                     <p>
-                         J'ai appris à mieux structurer mes projets ainsi qu'à amélioré la propreté du code.
-                    </p>
-                    <p>
-                        Je me suis réellement amélioré durant ce projet de WebEntreprise.
+                         J’ai particulièrement progressé dans l’intégration de plusieurs technologies au sein d’une même infrastructure ainsi que dans l’organisation d’un projet technique sur plusieurs semaines.
                     </p>
                 </div>
                 <div class="p-3 shadow-sm">
                     <h3 class="text-center margin-top-comp titre-anime">Compétences acquises</h3>
                     <ul>
-                        <li>Collecter et stocker les informations nécessaires à la gestion des plateformes de IoRT en
-                            utilisant une base de données.
+                        <li>Déploiement et administration d’un serveur Linux
                             <hr>
                         </li>
-                        <li>Interagir avec les données par le biais d’un site web dynamique utilisant les langages
-                            Python, HTML, CSS, SQL, le micro-framework Flask combiné au moteur de template Jinja2.
+                        <li>Utilisation d’OpenStack pour la gestion de machines virtuelles
                             <hr>
                         </li>
-                        <li>Contrôler les accès utilisateurs, les techniciens s’y connectant avec un compte spécifique,
-                            en utilisant les sessions.
+                        <li>Gestion d’une base de données PostgreSQL avec Python
                             <hr>
                         </li>
-                        <li>Travail d'équipe et organisation en groupe sur plusieurs semaine.
+                        <li>Développement Python orienté acquisition de données
+                            <hr>
+                        </li>
+                        <li>Travail en équipe et gestion de projet avec Gantt
+                          <hr>
+                        </li>
+                        <li>Visualisation des données en temps réel avec Grafana avec la mise en place de tableaux de bord personnalisés
                             <hr>
                         </li>
                     </ul>
@@ -163,13 +159,22 @@
                     <h3 class="text-center">Fonctions python de la gestion de la base de données</h3>
 
                     <figure class="mb-3 text-center">
-                        <img src="./data/img/sae203_fonctions_computers.png"
+                        <img src="./data/img/user_sae204dbuser.png"
                             class="img-fluid img-rounded img-general-blanc mx-auto d-block"
                             alt="Code Python de gestion des ordinateurs dans la base de données">
                         <figcaption class="text-center caption-text mt-2">Fonctions Python pour la gestion des données.</figcaption>
                     </figure>
+                    <h3 class="text-center">Fonctions python de la gestion de la base de données</h3>
+                    <figure class="mb-3 text-center">
+                        <img src="./data/img/termistance.png"
+                            class="img-fluid img-rounded img-general-blanc mx-auto d-block"
+                            alt="Image à ajouter">
+                        <figcaption class="text-center caption-text mt-2">Description de l'image.</figcaption>
+                    </figure>
                 </div>
             </div>
+
+            
 
         </div>
         <div class="container text-center my-5 py-5 border-top">
@@ -189,7 +194,6 @@
 
     </main>
 
-    <!-- FOOTER (REMIS À L’IDENTIQUE) -->
     <footer class="container mt-5 py-4 border-top">
         <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-start">

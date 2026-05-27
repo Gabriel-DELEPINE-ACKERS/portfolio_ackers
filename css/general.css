@@ -325,10 +325,23 @@ a.nav-footer-btn:hover,
     cursor: pointer;
 }
 
+
 .img-general-vert:hover {
     transform: scale(1.02) translateY(-5px);
     border-color: rgb(120, 180, 96);
     box-shadow: 0 0 40px 10px rgba(118, 196, 118, 0.9) !important;
+}
+
+
+.img-general-bleu {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.img-general-bleu:hover {
+    transform: scale(1.02) translateY(-5px);
+    border-color: rgb(62, 142, 145);
+    box-shadow: 0 0 40px 10px rgba(62, 142, 145) !important;
 }
 
 .dropdown {
@@ -365,22 +378,25 @@ a.nav-footer-btn:hover,
 /* mobile */
 @media (max-width: 768px) {
     .dropdown-menu {
-        /* On garde ton code tel quel */
         width: 200px;
         min-width: unset;
         margin: 0 auto;
         text-align: center;
 
-        /* AJOUT : On assure que l'absolute reste pour garder le style de "boite" */
-        position: absolute !important;
-        left: 50%;
-        transform: translateY(10px) scale(0.98);
+        position: static !important;
+        left: auto !important;
+        transform: none !important;
+        box-shadow: none !important;
     }
 
     /* AJOUT : L'état ouvert sur mobile pour l'animation au clic */
     .dropdown-menu.show {
-        transform: translateX(40%) translateY(0) scale(1) !important;
         opacity: 1 !important;
         visibility: visible !important;
+        transform: none !important;
+    }
+
+    .dropdown-menu .dropdown-item {
+        text-align: center !important;
     }
 }
