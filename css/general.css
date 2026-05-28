@@ -365,59 +365,55 @@ a.nav-footer-btn:hover,
     position: relative;
 }
 
-/* état caché */
-.dropdown-menu {
-    /* AJOUT : Pour permettre l'animation malgré Bootstrap */
-    display: block !important;
-    visibility: hidden;
-
-    position: absolute;
-    opacity: 0;
-    transform: translateY(10px) scale(0.98);
-    pointer-events: none;
-
-    /* AJOUT : visibility dans la transition */
-    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
-
-    text-align: center;
-}
-
-/* état ouvert (Bootstrap + hover PC) */
-.dropdown-menu.show {
-    /* AJOUT : Rend le menu visible */
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    pointer-events: auto;
-}
-
-/* Hover uniquement pour les dropdowns de navigation */
-.navbar .dropdown:hover .dropdown-menu {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(-26%) translateY(0) scale(1);
-    pointer-events: auto;
-}
-
-/* mobile */
-@media (max-width: 768px) {
+/* Desktop : menu hors-flux, s'affiche au hover et glisse depuis la gauche */
+@media (hover: hover) and (min-width: 769px) {
     .navbar .dropdown-menu {
-        width: 200px;
-        min-width: unset;
-        margin: 0 auto;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        min-width: 180px;
+        white-space: nowrap;
         text-align: center;
-
-        position: static !important;
-        left: auto !important;
-        transform: none !important;
-        box-shadow: none !important;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(-15%) translateY(-10px) scale(0.95);
+        transition: opacity 0.22s ease, transform 0.22s cubic-bezier(.2, .9, .2, 1), visibility 0.22s;
+        z-index: 1000;
     }
 
-    /* AJOUT : L'état ouvert sur mobile pour l'animation au clic */
-    .dropdown-menu.show {
-        opacity: 1 !important;
-        visibility: visible !important;
+    .navbar .dropdown:hover .dropdown-menu {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0) translateY(0) scale(1);
+    }
+}
+
+/* Mobile : menu dans le flux, s'ouvre au clic via Bootstrap */
+@media (max-width: 768px) {
+    .navbar .dropdown-menu {
+        position: static !important;
+        left: auto !important;
+        min-width: unset;
+        width: 100%;
+        margin: 0;
+        box-shadow: none !important;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        pointer-events: none;
         transform: none !important;
+        transition: none;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .navbar .dropdown-menu.show {
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        pointer-events: auto !important;
     }
 
     .dropdown-menu .dropdown-item {
@@ -425,3 +421,89 @@ a.nav-footer-btn:hover,
     }
 }
 
+/* dropdown Projets */
+.dropdown {
+    position: relative;
+}
+
+@media (hover: hover) and (min-width: 769px) {
+    .navbar .dropdown-menu {
+        display: block !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: auto;
+        min-width: 180px;
+        white-space: nowrap;
+        text-align: center;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(-10px) scale(0.96);
+        transform-origin: top left;
+        transition: opacity 0.22s ease, transform 0.22s cubic-bezier(.2, .9, .2, 1), visibility 0.22s;
+        z-index: 1050;
+    }
+
+    .navbar .dropdown:hover > .dropdown-menu,
+    .navbar .nav-item.dropdown:hover .dropdown-menu {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .dropdown-menu {
+        display: block !important;
+        position: static !important;
+        left: auto !important;
+        right: auto !important;
+        min-width: unset;
+        width: 100%;
+        margin: 0;
+        box-shadow: none !important;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        pointer-events: none;
+        transform: none !important;
+        transition: none;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .navbar .dropdown-menu.show {
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        pointer-events: auto !important;
+    }
+
+    .dropdown-menu .dropdown-item {
+        text-align: center !important;
+    }
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+/* Pour Firefox */
+* {
+    scrollbar-width: none;
+}
