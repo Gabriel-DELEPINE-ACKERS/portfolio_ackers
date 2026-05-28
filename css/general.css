@@ -383,9 +383,16 @@ a.nav-footer-btn:hover,
 }
 
 /* état ouvert (Bootstrap + hover PC) */
-.dropdown-menu.show,
-.dropdown:hover .dropdown-menu {
+.dropdown-menu.show {
     /* AJOUT : Rend le menu visible */
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+/* Hover uniquement pour les dropdowns de navigation */
+.navbar .dropdown:hover .dropdown-menu {
     visibility: visible;
     opacity: 1;
     transform: translateX(-26%) translateY(0) scale(1);
@@ -394,7 +401,7 @@ a.nav-footer-btn:hover,
 
 /* mobile */
 @media (max-width: 768px) {
-    .dropdown-menu {
+    .navbar .dropdown-menu {
         width: 200px;
         min-width: unset;
         margin: 0 auto;
@@ -417,3 +424,4 @@ a.nav-footer-btn:hover,
         text-align: center !important;
     }
 }
+
